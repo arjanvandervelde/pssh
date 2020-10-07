@@ -341,7 +341,7 @@ class Writer(threading.Thread):
                 else:
                     if dest is None:
                         dest = self.files[filename] = open(
-                            filename, 'wb', buffering=1)
+                            filename, 'wb')
                         psshutil.set_cloexec(dest)
                     dest.write(data)
                     dest.flush()
